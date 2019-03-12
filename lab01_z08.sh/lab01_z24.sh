@@ -5,8 +5,9 @@ if [ -n $1 ] && [ "$1"  == "-task" ];then
   echo
   echo
   fi
-  args=("$@")
-  last =$(($# - 1))
-  for i in `seq 0 $last`; do mod=$(($i%2))  if [ $mod == 1 ]; then  echo ${args[$i]};fi; done 
+  args=("$@")  
+  last=$(($# - 1))
+  for i in `seq 0 $last`; do mod=$(($i%2));  if [ $mod == 1 ]; then  echo ${args[$i]};fi; done 
+ 
 
 exit 0
